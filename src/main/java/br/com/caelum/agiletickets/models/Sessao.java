@@ -91,6 +91,10 @@ public class Sessao {
 	}
 
 	public boolean podeReservar(Integer numeroDeIngressos) {
-		return getIngressosDisponiveis() > numeroDeIngressos;
+		return getIngressosDisponiveis() >= numeroDeIngressos;
+	}
+
+	public void cancela(int numeroDeIngressos) {
+		this.ingressosReservados -= numeroDeIngressos;
 	}
 }
